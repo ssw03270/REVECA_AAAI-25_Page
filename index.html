@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="REVECA: Adaptive Planning and Trajectory-based Validation in Cooperative Language Agents using Information Relevance and Relative Proximity">
+  <meta name="keywords" content="REVECA, LLMs, Agents">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REVECA</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Researchers List
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://ssw03270.github.io/">
+            SeungWon Seo
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">REVECA: Adaptive Planning and Trajectory-based Validation in Cooperative Language Agents using Information Relevance and Relative Proximity</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ssw03270.github.io/">SeungWon Seo</a><sup>*</sup><sup>1</sup>, 
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/seongrae-noh-220b462b7/">SeongRae Noh</a><sup>*</sup><sup>1</sup>, 
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/bluehyena">Junhyeok Lee</a><sup>1</sup>, 
+            </span>
+            <span class="author-block">
+              <a href="https://dnpcs12.github.io/">SooBin Lim</a><sup>1</sup>, 
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/khu-aims/">Won Hee Lee</a><sup>1</sup>, 
+            </span>
+            <span class="author-block">
+              <a href="https://iiixr.korea.ac.kr/">HyeongYeop Kang</a><sup>o</sup><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Kyung Hee University, Yongin, Republic of Korea</span>
+            <span class="author-block"><sup>2</sup>Korea University, Seongbuk-gu, Republic of Korea</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>These authors contributed equally.</span>
+            <span class="author-block"><sup>o</sup>Corresponding author.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.16751"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.16751"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/@IIIXRLab"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ssw03270/REVECA_AAAI-25"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/main.png" alt="Framework Image" style="height: 100%;">
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">the REVECA process workflow
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We address the challenge of multi-agent cooperation, where agents achieve a common goal by cooperating with decentralized agents under complex partial observations.
+
+            Existing cooperative agent systems often struggle with efficiently processing continuously accumulating information, managing globally 
+            suboptimal planning due to lack of consideration of collaborators, and addressing false planning caused by environmental changes introduced by other collaborators. 
+            To overcome these challenges, we propose the <b>RE</b>levance, Proximity, and <b>V</b>alidation-<b>E</b>nhanced <b>C</b>ooperative Language <b>A</b>gent (REVECA), 
+            a novel cognitive architecture powered by GPT-4o-mini. REVECA enables efficient memory management, optimal planning, 
+            and cost-effective prevention of false planning by leveraging Relevance Estimation, Adaptive Planning, and Trajectory-based Validation. 
+
+            Extensive experimental results demonstrate REVECA's superiority over existing methods across various benchmarks, 
+            while a user study reveals its potential for achieving trustworthy human-AI cooperation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Example Scenarios. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Example Scenarios</h2>
+        <!-- Relevance Estimation. -->
+        <h3 class="title is-4">Relevance Estimation</h3>
+        <div class="content has-text-justified">
+          <p>
+            In noisy environments, agents often accumulate irrelevant information, 
+            overwhelming their memory and impairing decision-making. Our method enables agents to prioritize goal-relevant data, avoiding distractions from irrelevant objects.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img id="teaser" src="./static/images/prompt example - Efficient Memory Management-1.png" alt="Framework Image" style="height: 100%;">
+        </div>
+        <!-- Relevance Estimation. -->
+
+        <!--/ Adaptive Planning. -->
+        <h3 class="title is-4">Adaptive Planning</h3>
+        <div class="content has-text-justified">
+          <p>
+            By considering collaborators' positions and task priorities, this approach guides agents toward global optimization, ensuring tasks are assigned to the most suitable agents.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img id="teaser" src="./static/images/prompt example - Globally Optimal Planning-1.png" alt="Framework Image" style="height: 100%;">
+        </div>
+        <!--/ Adaptive Planning. -->
+
+        <!--/ Trajectory-based Validation. -->
+        <h3 class="title is-4">Trajectory-based Validation</h3>
+        <div class="content has-text-justified">
+          <p>
+            In partially observable environments, agents' knowledge can become outdated due to unseen interactions, leading to false plans. 
+            This technique allows agents to infer collaborators past trajectories to verify the planning information.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img id="teaser" src="./static/images/prompt example - Prevention of False Planning-1.png" alt="Framework Image" style="height: 100%;">
+        </div>
+        <!--/ Trajectory-based Validation. -->
+
+      </div>
+    </div>
+    <!--/ Example Scenarios. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{seo2024llm,
+      title={LLM-Based Cooperative Agents using Information Relevance and Plan Validation},
+      author={Seo, SeungWon and Lee, Junhyeok and Noh, SeongRae and Kang, HyeongYeop},
+      journal={arXiv preprint arXiv:2405.16751},
+      year={2024}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2405.16751">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/ssw03270/REVECA_AAAI-25" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center">
+            Website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks for their effort.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
